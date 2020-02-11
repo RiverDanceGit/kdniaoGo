@@ -31,6 +31,6 @@ EBusinessID 和 AppKey 去 [快递鸟用户管理后台](http://kdniao.com/UserC
 * [隐私快递API](http://www.kdniao.com/api-safemail)
 * [智选物流API](http://www.kdniao.com/api-exprecommend)
 * [物流短信API](http://www.kdniao.com/api-sms)
-* [单号识别API](http://www.kdniao.com/api-recognise)
+* [单号识别API](http://www.kdniao.com/api-recognise) (完成)
 * [物流评价API](http://www.kdniao.com/api-evaluate)
 * [实名寄递API](http://www.kdniao.com/api-verified)

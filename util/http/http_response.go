@@ -2,7 +2,6 @@ package http
 
 import (
 	"fmt"
-	"git.xiaotuo.co/xiaotuo/beicang/util"
 	"time"
 )
 
@@ -10,7 +9,6 @@ type HttpResponse struct {
 	code      int
 	bytes     []byte
 	startTime time.Time
-	cookieJar util.CookieJar
 }
 
 func (resp *HttpResponse) SetCode(code int) *HttpResponse {
@@ -47,13 +45,4 @@ func (resp HttpResponse) GetLatency() float64 {
 
 func (resp HttpResponse) GetLatencyStr() string {
 	return fmt.Sprintf("%.2fs", resp.GetLatency())
-}
-
-func (resp *HttpResponse) SetCookieJar(cookieJar util.CookieJar) *HttpResponse {
-	resp.cookieJar = cookieJar
-	return resp
-}
-
-func (resp HttpResponse) GetCookieJar() util.CookieJar {
-	return resp.cookieJar
 }
