@@ -25,7 +25,7 @@ EBusinessID 和 AppKey 去 [快递鸟用户管理后台](http://kdniao.com/UserC
 #### 查询类接口
 * [即时查询API](http://www.kdniao.com/api-track)
 * [物流跟踪API](http://www.kdniao.com/api-follow)
-* [在途监控API](http://www.kdniao.com/api-monitor)
+* [在途监控API](http://www.kdniao.com/api-monitor) (部分完成)
 
 #### 增值类接口
 * [隐私快递API](http://www.kdniao.com/api-safemail)
