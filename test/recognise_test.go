@@ -17,6 +17,7 @@ func TestRecognise(t *testing.T) {
 		t.Error("err", err)
 		return
 	}
+	t.Log("resp.EBusinessId", resp.EBusinessId)
 	t.Log("resp.LogisticCode", resp.LogisticCode)
 	for _, shipper := range resp.Shippers {
 		t.Log(shipper.ShipperCode, shipper.ShipperName)

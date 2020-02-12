@@ -14,7 +14,7 @@ func NewRecogniseRequest() RecogniseRequest {
 
 type RecogniseRequest struct {
 	KdniaoRequest
-	LogisticCode string `json:"LogisticCode"`
+	LogisticCode string `json:"LogisticCode"` // 物流单号
 }
 
 func (req *RecogniseRequest) SetLogisticCode(logisticCode string) *RecogniseRequest {
