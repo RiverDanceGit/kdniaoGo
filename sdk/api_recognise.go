@@ -28,7 +28,7 @@ func (obj ApiRecognise) GetRequest(logisticCode string) request.RecogniseRequest
 }
 
 func (obj ApiRecognise) GetResponse(req request.RecogniseRequest) (response.RecogniseResponse, error) {
-	url := enum.GATEWAY
+	url := enum.GATEWAY + enum.URI_BUSINESS
 
 	req.UpdateRequestData()
 	var resp response.RecogniseResponse
