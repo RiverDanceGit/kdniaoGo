@@ -7,7 +7,11 @@ import (
 )
 
 func TestMonitorSubscribe(t *testing.T) {
-	config := getConfig()
+	config, err := getConfig()
+	if err != nil {
+		t.Error("err", err)
+		return
+	}
 	logger := kdniaoGo.NewKdniaoLogger()
 
 	apiMonitorSubscribeSdk := sdk.NewApiMonitorSubscribe(config, logger)

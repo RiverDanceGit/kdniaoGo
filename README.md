@@ -12,6 +12,12 @@ go get -u -x -v -insecure github.com/RiverDanceGit/kdniaoGo
 ### Configure Parameter
 EBusinessID 和 AppKey 去 [快递鸟用户管理后台](http://kdniao.com/UserCenter/UserHome.aspx) 查看
 
+```shell
+shell> vi .env
+APP_EBUSINESS_ID=XXXX
+APP_KEY=XXXXXXXX
+```
+
 ### API Document
 * [API 文档首页](http://www.kdniao.com/api-all)
 * 快递公司编码 [《2019快递鸟接口支持快递公司编码.xlsx》](http://www.kdniao.com/file/2019%E5%BF%AB%E9%80%92%E9%B8%9F%E6%8E%A5%E5%8F%A3%E6%94%AF%E6%8C%81%E5%BF%AB%E9%80%92%E5%85%AC%E5%8F%B8%E7%BC%96%E7%A0%81.xlsx)
