@@ -8,7 +8,7 @@ import (
 func NewRecogniseRequest() RecogniseRequest {
 	req := RecogniseRequest{}
 	req.SetRequestType(enum.REQUEST_TYPE_RECOGNISE)
-	req.SetDataType(enum.DATA_TYPE)
+	req.SetDataType(enum.DATA_TYPE_JSON)
 	return req
 }
 
