@@ -3,14 +3,23 @@ package test
 import (
 	"errors"
 	"github.com/RiverDanceGit/kdniaoGo"
-	"os"
+	"github.com/RiverDanceGit/kdniaoGo/util"
+	"strings"
 )
 
 func getConfig() (kdniaoGo.KdniaoConfig, error) {
-	eBusinessId := os.Getenv("APP_EBUSINESS_ID")
-	appKey := os.Getenv("APP_KEY")
-	if "" == eBusinessId || "" == appKey {
-		return kdniaoGo.NewKdniaoConfig(eBusinessId, appKey), errors.New(".env not exists")
+	eBusinessId, appKey, err := getConfigValue()
+	return kdniaoGo.NewKdniaoConfig(eBusinessId, appKey), err
+}
+
+func getConfigValue() (string, string, error) {
+	configStr, err := util.FileGetContents("../config.txt")
+	if err != nil {
+		return "", "", err
 	}
-	return kdniaoGo.NewKdniaoConfig(eBusinessId, appKey), nil
+	configs := strings.Split(configStr, ",")
+	if 2 != len(configs) {
+		return "", "", errors.New("eBusinessId or appKey is empty")
+	}
+	return configs[0], configs[1], nil
 }

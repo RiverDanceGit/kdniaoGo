@@ -13,9 +13,8 @@ go get -u -x -v -insecure github.com/RiverDanceGit/kdniaoGo
 EBusinessID 和 AppKey 去 [快递鸟用户管理后台](http://kdniao.com/UserCenter/UserHome.aspx) 查看
 
 ```shell
-shell> vi .env
-APP_EBUSINESS_ID=XXXX
-APP_KEY=XXXXXXXX
+shell> vi config.txt
+EBusinessID,AppKey
 ```
 
 ### API Document
