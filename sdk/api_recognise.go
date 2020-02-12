@@ -24,13 +24,13 @@ func (obj ApiRecognise) GetRequest(logisticCode string) request.RecogniseRequest
 	req := request.NewRecogniseRequest()
 	req.SetConfig(obj.config)
 	req.SetLogisticCode(logisticCode)
-	req.SetRequestData(req.ToJson())
 	return req
 }
 
 func (obj ApiRecognise) GetResponse(req request.RecogniseRequest) (response.RecogniseResponse, error) {
 	url := enum.GATEWAY
 
+	req.UpdateRequestData()
 	var resp response.RecogniseResponse
 	httpResp, err := http.HttpPostForm(url, req.ToValues(), obj.logger)
 	if err != nil {
