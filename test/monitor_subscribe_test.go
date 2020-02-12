@@ -11,7 +11,7 @@ func TestMonitorSubscribe(t *testing.T) {
 	logger := kdniaoGo.NewKdniaoLogger()
 
 	apiMonitorSubscribeSdk := sdk.NewApiMonitorSubscribe(config, logger)
-	req := apiMonitorSubscribeSdk.GetRequest("L288474879009752702", "ZTO")
+	req := apiMonitorSubscribeSdk.GetRequest("4303618027892", "YD")
 	resp, err := apiMonitorSubscribeSdk.GetResponse(req)
 	if err != nil {
 		t.Error("err", err)

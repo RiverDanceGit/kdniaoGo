@@ -91,8 +91,8 @@ func (req MonitorSubscribeRequest) GetLogisticCode() string {
 	return req.LogisticCode
 }
 
-func (req *MonitorSubscribeRequest) SetShipperCode(ShipperCode string) *MonitorSubscribeRequest {
-	req.ShipperCode = ShipperCode
+func (req *MonitorSubscribeRequest) SetShipperCode(shipperCode string) *MonitorSubscribeRequest {
+	req.ShipperCode = shipperCode
 	return req
 }
 
@@ -100,8 +100,8 @@ func (req MonitorSubscribeRequest) GetShipperCode() string {
 	return req.ShipperCode
 }
 
-func (req *MonitorSubscribeRequest) SetCustomerName(CustomerName string) *MonitorSubscribeRequest {
-	req.CustomerName = CustomerName
+func (req *MonitorSubscribeRequest) SetCustomerName(customerName string) *MonitorSubscribeRequest {
+	req.CustomerName = customerName
 	return req
 }
 
